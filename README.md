@@ -41,11 +41,26 @@ Of course there are a few hindrances on implementation:
 Create a *Followee* Neuron through command line. 
 
 #### Creation of *Management* Followee
-Assign the Followee Neuron to the Follower for the topic of Management
-Provide the ability to *Unassign* the Followee
+- Assignment of Manage Neuron Followee
+
+The video linked here (https://youtu.be/FfJLkjuLmaU) provides the essential steps on how do this assignment of the followee. **The assignment of this followee as the management topic should be done with necessary due diligence and care.** *See Risks for more details.*
+
+The User Experience (UX) in setting up the followee is quite horrendous just now. There is an issue open here (https://github.com/dfinity/nns-dapp/issues/261) for Dfinity to change this experience. Feel free to campaign for this change.
+
+
+##### Some Risks 
+-- Tied to implementation
+As noted, this is tied to the implementation in javascript. This implementation may change and may leave you dry if you try to reverse the change sometimes in the future. Of course if enough people petition in the issue as noted above, there is a high likelyhood that this feature might come back again in mainstream; instead of the current workaround. 
+
+-- More than intended power to the followee
+The followee gets more than the merge-maturity power; including the ability to spawn and start-dissolve. Care should be taken to delegate such power to responsible providers who will not abuse such power or create a system for yourself.
+
+
+- *Unassignment* of the Manage Neuron Followee
+The first steps in the video linked (https://youtu.be/FfJLkjuLmaU) is to unassign an already existing management neuron followee. 
 
 #### Creation of Merge Proposal through command line
-Utilizing the dfx call ... manage_neuron command 
+The issue here (https://github.com/dfinity/nns-dapp/issues/261) provides insights into how an neuron can create a proposal. Each proposal has a cost associated with it. This cost makes it economically unfeasible to do auto-merges on a daily basis in certain cases. The analysis of the cost will be dealt with in a seperate topic.
 
 ### Codification into POC
 Develop code that formalizes this process.
@@ -54,4 +69,3 @@ Develop code that formalizes this process.
 Cronify this code so that it is auto-merging daily.
 
 ### Auto Merging As A Service
- 
